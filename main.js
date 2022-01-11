@@ -38,7 +38,7 @@ const posts = [
         media: "https://unsplash.it/600/400?image=24",
         author: {
             name: "Luca Formicola",
-            image: null
+            image: 'null'
         },
         likes: 56,
         created: "2021-04-03"
@@ -64,7 +64,7 @@ for(let key in posts){
         <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="${posts[key].author.name}">                    
+                    <img class="profile-pic" src="${posts[key].author.image}" alt="${posts[key].author.name}">                    
                 </div>
                 <div class="post-meta__data">
                     <div class="post-meta__author">${posts[key].author.name}</div>
@@ -74,7 +74,7 @@ for(let key in posts){
         </div>
         <div class="post__text">${posts[key].content}</div>
         <div class="post__image">
-            <img src="${posts[key].author.image}" alt="">
+            <img src="${posts[key].media}" alt="">
         </div>
         <div class="post__footer">
             <div class="likes js-likes">
@@ -91,3 +91,5 @@ for(let key in posts){
         </div>            
     </div>`
 }
+
+// bottone
